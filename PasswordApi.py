@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 
 def generate_password():
-    #password = "".join(random.choices(string.ascii_letters + string.digits, k=random.randint(8, 16)))
+    password = "".join(random.choices(string.ascii_letters + string.digits, k=random.randint(8, 16)))
     #password = "".join(random.choices(string.ascii_letters + string.digits, k=4))
-    password = "".join(random.choices(string.digits, k=7))
+    #password = "".join(random.choices(string.digits, k=7))
     print(password)
     return hashlib.md5(password.encode()).hexdigest()
 
